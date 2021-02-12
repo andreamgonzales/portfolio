@@ -1,0 +1,388 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+
+
+
+
+@font-face{
+    font-family: KBold;
+    src: url(Karla-Bold.ttf);
+    font-weight: 600;
+}
+
+
+@font-face{
+    font-family: KReg;
+    src: url(Karla-Regular.ttf);
+    font-weight: 600;
+}
+
+
+@font-face{
+    font-family: KLight;
+    src: url(Karla-Light.ttf);
+    font-weight: 600;
+}
+
+.theme-light {
+   --color-primary: white;
+   --color-secondary: #f4f4f4;
+   --color-accent: #faa9fc;
+   --font-color: #232320;
+   --font-color-secondary: #65636f;
+   --font-color-third: darkgray;
+}
+.theme-dark {
+   --color-primary: #161615;
+   --color-secondary: #161615;
+   --color-accent: #faa9fc;
+   --font-color: #ffffff;
+    --font-color-secondary: #ffffff;
+    --font-color-third: #faa9fc;
+}
+
+
+
+/* NAVIGATION BAR */
+.topnav {
+  background-color: white;
+  overflow: hidden;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  position: fixed;
+    z-index: 1;
+  width: 100%;
+       box-shadow: 0 2px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.01);
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left
+  color: #232320;
+  text-align: center;
+  padding: 14px 55px;
+  font-size: 15px;
+  font-family: "KReg"
+}
+
+/* Color of links in general */
+.topnav a:link{
+  color: #232320;
+  text-decoration: none;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover{
+  color: #faa9fc!important; /* the important part keeps the hover color always the color i want when i hover, even if i already visited the link before */
+  
+ 
+}
+
+/* Change the color for the active/current link */
+.topnav a:active{
+  color: #232320;
+  text-decoration: none;
+}
+
+/* Change the color for the link you've visited already */
+.topnav a:visited{
+    color: #232320;
+    text-decoration: none;
+}
+
+
+
+
+.container button {
+  color: var(--font-color);
+  background: var(--color-primary);
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  left: 0px;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0px 15px #2020203d;
+  background: white url('night.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .slider {
+  background-color: #faa9fc;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #faa9fc;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background: white url('day.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+/* HEADER */
+.header{
+    padding-top: 150px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    width: 100%;  
+    background: var(--color-primary); 
+}
+
+/* about me title */
+h1{
+    font-family: "KBold";
+    font-size: 17px;
+    letter-spacing: 2px;
+    color: var(--font-color-third);
+    padding-bottom: 20px;
+     padding-top: 20px;
+}
+
+/* hi im andrea title */
+h2{
+    font-family: KBold;
+    font-style: bold;
+    font-size: 30px;
+    padding-bottom: 20px;
+    color: var(--font-color);
+}
+
+/* all description text */
+p{
+    font-family: KReg;
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--font-color);
+}
+
+/* line breaks */
+br{
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: 20px; /* change this to whatever height you want it */
+}
+
+/* picture of me */
+.me2021{
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.05);
+}
+/* i also enjoy title */
+h3{
+    font-family: "KBold";
+    font-size: 17px;
+    letter-spacing: 2px;
+    color: var(--font-color-third);
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+
+/* box sizing */
+* {
+  box-sizing: border-box;
+}
+
+
+/* Responsivity */
+@media screen and (max-width: 500px) {
+  .column, {
+    width: 100%;
+  }
+}
+
+/* both of the columns together */
+.row{
+    padding-bottom: 80px;
+}
+/* CREATES THE 2 COLUMN TEXTS */
+/* Create two equal columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 50%;
+  padding: 40px;
+    padding-left: 150px;
+}
+
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 40px;
+    padding-right: 150px;
+    padding-left: 70px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+
+
+.footer{
+    background: var(--color-secondary);
+    padding-bottom: 70px;
+    padding-top: 40px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+/* FOOTER FLEX PROPERTIES*/
+.flex-containerfoot {
+  /* We first create a flex layout context */
+  display: flex;
+  
+  /* Then we define the flow direction 
+     and if we allow the items to wrap 
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+  
+  /* Then we define how is distributed the remaining space */
+  justify-content: flex-start;
+  
+  padding-left: 90px;
+  margin: 0;
+}
+
+
+/* FOOTER TEXT PROPERTIES*/
+h7{
+    font-family: KBold;
+    font-weight: bold;
+    color: var(--font-color);
+    font-size: 22px;
+    line-height: 60px;
+}
+
+.footerstuff{
+    font-family: KReg;
+    color: var(--font-color-secondary);
+    font-size: 17px;
+    padding-bottom: 20px;
+    line-height: 28px;
+}
+
+h8{
+    font-family: KReg;
+   color: var(--font-color-secondary);
+    font-size: 17px;
+    text-align: right;
+}
+
+/* FOOTER LINKS */
+/* Color of links in general */
+.footer a:link{
+  color: var(--font-color-secondary);
+}
+
+/* Change the color of links on hover */
+.footer a:hover{
+  color:  #faa9fc!important; /* the important part keeps the hover color always the color i want when i hover, even if i already visited the link before */
+  text-decoration: none;
+}
+
+/* Change the color for the active/current link */
+.footera:active{
+  color: #faa9fc;
+}
+
+/* Change the color for the link you've visited already */
+.footer a:visited{
+    color: var(--font-color-secondary);
+    text-decoration: none;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .topnav, .header, .footer
+}
+
+@media only screen and (min-width: 600px) {
+  .topnav, .header, .footer
+}
+
+@media only screen and (min-width: 768px) {
+  .topnav, .header, .footer
+} 
+
+@media only screen and (min-width: 992px) {
+  .topnav, .header, .footer
+} 
+
+@media only screen and (min-width: 1200px) {
+  .topnav, .header, .footer
+}

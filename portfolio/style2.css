@@ -1,0 +1,591 @@
+*{
+    padding:0;
+    margin:0;
+}
+@font-face{
+    font-family: Bantayog;
+    src: url(Bantayog-Regular.otf);
+    font-weight: 1000;
+}
+
+
+
+@font-face{
+    font-family: KBold;
+    src: url(Karla-Bold.ttf);
+    font-weight: 600;
+}
+
+
+@font-face{
+    font-family: KReg;
+    src: url(Karla-Regular.ttf);
+    font-weight: 600;
+}
+
+
+@font-face{
+    font-family: KLight;
+    src: url(Karla-Light.ttf);
+    font-weight: 600;
+}
+
+
+
+
+/* NAVIGATION BAR */
+.topnav {
+  background-color: transparent;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left
+  color: #F0F0F3;
+  text-align: center;
+  padding: 14px 55px;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: "KLight";
+}
+
+/* Color of links in general */
+.topnav a:link{
+  color: #F0F0F3;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover{
+  color: #FFE4E4!important; /* the important part keeps the hover color always the color i want when i hover, even if i already visited the link before */
+}
+
+/* Change the color for the active/current link */
+.topnav a:active{
+  color: #E3BEFF;
+}
+
+/* Change the color for the link you've visited already */
+.topnav a:visited{
+    color: white;
+}
+
+
+
+
+
+/* HEADER */
+.header{
+    background-image: url(busogheader.png);
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 25px;
+    padding-bottom: 70px;
+    height: 100vh;
+}
+
+/* the busog title */
+h1{
+    font-family: "Bantayog";
+    font-size: 100px;
+    color: white;
+    padding-left: 150px;
+    padding-top: 70px;
+}
+
+/* the food fest title */
+h2{
+    font-family: "Bantayog";
+    font-size: 30px;
+    color: white;
+    padding-left: 150px;
+    padding-bottom: 10px;
+}
+
+.shorts{
+    margin-top: 50px;
+}
+
+/* role, duration, tools, team title */
+h3{
+    font-family: "KBold";
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    color: white;
+    padding-left: 150px;
+    padding-bottom: 6px;
+    letter-spacing: 0.4px;
+}
+
+/* role, duration, tools, team description */
+h4{
+    font-family: "KLight";
+    font-weight: normal;
+    font-size: 15px;
+    color: white;
+    padding-left: 150px;
+    padding-bottom: 13px;
+    letter-spacing: 0.2px;
+    line-height: 21px;
+}
+
+/* line breaks */
+hr {
+    width: 200px;
+    margin-left: 150px;
+    margin-right: 800px;
+    border-top: 1px solid white;
+    border-bottom: transparent;
+    margin-bottom: 15px;
+    opacity: 0.3;
+}
+
+
+
+
+
+
+
+
+/* overview part */
+.overview{
+    margin-left: 150px;
+    margin-right: 150px;
+    padding-bottom: 100px;
+}
+
+.boldstuff{
+    font-family: "KBold"; 
+    font-size: 17px;
+     color: #303030;
+    line-height: 28px;
+}
+/* challenge paragraph */
+.challengepara{
+    font-family: KReg;
+    font-size: 17px;
+    color: #303030;
+    line-height: 28px;
+    padding: 15px 15px 15px 15px;
+    background-color: #F2F2F2;
+    margin-top: 60px;
+}
+
+
+
+
+
+/* IDEATION ROWS AND COLUMNS */
+/* box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Responsivity */
+@media screen and (max-width: 500px) {
+  .column1, {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .column2, {
+    width: 100%;
+  }
+}
+
+/* both of the columns together */
+.ideationrow{
+    padding-bottom: 70px;
+    padding-top: 70px;
+}
+/* CREATES THE 2 COLUMN TEXTS */
+/* Create two equal columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 20%;
+}
+
+.column2 {
+  float: left;
+  width: 80%;
+}
+
+/* Clear floats after the columns */
+.ideationrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column1 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column2 {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+/* ideation title */
+.ideationtitle{
+    font-family: "KBold";
+    letter-spacing: 0.7px;
+    font-size: 28px;
+    color: black;
+    padding-bottom: 15px;
+}
+
+/* ideation sub */
+.ideationsub{
+    font-family: "KBold";
+    letter-spacing: 0.7px;
+    font-size: 22px;
+    color: #515151;
+    padding-bottom: 15px;
+}
+
+
+/* ideation first paragraph */
+.ideationpara{
+    font-family: KReg;
+    font-size: 17px;
+    color: #303030;
+    line-height: 28px;
+}
+
+/* ideation second paragraph */
+.ideationpara2{
+    font-family: KReg;
+    font-size: 17px;
+    color: #303030;
+    line-height: 28px;
+    padding-top: 15px;
+}
+
+/* branding title */
+.brandingtitle{
+    font-family: "KBold";
+    letter-spacing: 0.7px;
+    font-size: 28px;
+    color: black;
+    padding-bottom: 15px;
+}
+
+/* tone paragraph */
+.tonepara{
+    font-family: KReg;
+    font-size: 17px;
+    color: #303030;
+    line-height: 28px;
+    padding: 15px 15px 15px 15px;
+    background-color: #F2F2F2;
+    margin-top: 15px;
+}
+
+
+
+
+
+/* branding image */
+.brandingimg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+/* BRANDING ROWS AND COLUMNS */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+
+
+/* website recording title */
+.websitetitle{
+    font-family: "KBold";
+    letter-spacing: 0.7px;
+    font-size: 28px;
+    color: black;
+    padding-top: 40px;
+    padding-bottom: 15px;
+}
+
+
+figure1{
+    padding-top: 10px;
+}
+
+figure{
+    padding-top: 60px;
+}
+
+
+figcaption{
+    font-family: "KBold";
+    font-size: 17px;
+    letter-spacing: 2px;
+    color: darkgray;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+
+
+
+
+
+/* REFLECTION ROWS AND COLUMNS*/
+* {
+  box-sizing: border-box;
+}
+
+/* Responsivity */
+@media screen and (max-width: 500px) {
+  .column1, {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .column2, {
+    width: 100%;
+  }
+}
+
+/* both of the columns together */
+.reflectionrow{
+    padding-top: 100px;
+}
+/* CREATES THE 2 COLUMN TEXTS */
+/* Create two equal columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 20%;
+}
+
+.column2 {
+  float: left;
+  width: 80%;
+}
+
+/* Clear floats after the columns */
+.reflectionrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column1 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column2 {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+/* rows and columns */
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 10px;
+}
+
+/* reflection title */
+.reflectiontitle{
+   font-family: "KBold";
+    letter-spacing: 0.7px;
+    font-size: 28px;
+    color:black;
+    padding-bottom: 15px;
+}
+
+/* reflection paragraph */
+.reflectionpara{
+    font-family: KReg;
+    font-size: 17px;
+    color: #303030;
+    line-height: 28px;
+    padding-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    background-color: #F2F2F2;
+    padding-bottom: 70px;
+    padding-top: 40px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+   
+
+/* FOOTER FLEX PROPERTIES*/
+.flex-containerfoot {
+  /* We first create a flex layout context */
+  display: flex;
+  
+  /* Then we define the flow direction 
+     and if we allow the items to wrap 
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+  
+  /* Then we define how is distributed the remaining space */
+  justify-content: flex-start;
+  
+  padding-left: 90px;
+  margin: 0;
+}
+
+
+/* FOOTER TEXT PROPERTIES*/
+h7{
+    font-family: KBold;
+    font-weight: bold;
+    color: #303030;
+    font-size: 22px;
+    line-height: 60px;
+}
+
+.footerstuff{
+    font-family: KReg;
+    color: #303030;
+    font-size: 17px;
+    padding-bottom: 20px;
+    line-height: 28px;
+}
+
+h8{
+    font-family: KReg;
+    color: #303030;
+    font-size: 17px;
+    text-align: right;
+}
+
+/* FOOTER LINKS */
+/* Color of links in general */
+.footer a:link{
+  color: #303030;
+  text-decoration: underline;
+}
+
+/* Change the color of links on hover */
+.footer a:hover{
+  color: #faa9fc!important; /* the important part keeps the hover color always the color i want when i hover, even if i already visited the link before */
+  text-decoration: none;
+}
+
+/* Change the color for the active/current link */
+.footera:active{
+  color: #faa9fc;
+}
+
+/* Change the color for the link you've visited already */
+.footer a:visited{
+    color: #303030;
+    text-decoration: underline;
+}
+
+
+
+/* Responsive layout for busog branding- makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .topnav, .work, .footer, .shorts
+}
+
+@media only screen and (min-width: 600px) {
+  .topnav, .work, .footer, .shorts
+}
+
+@media only screen and (min-width: 768px) {
+  .topnav, .work, .footer, .shorts
+} 
+
+@media only screen and (min-width: 992px) {
+  .topnav, .work, .footer, .shorts
+} 
+
+@media only screen and (min-width: 1200px) {
+  .topnav, .work, .footer, .shorts
+}

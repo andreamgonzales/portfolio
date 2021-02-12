@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Andrea</title>
+    
+        <link rel="stylesheet" href="styleabout.css">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+   
+<body> 
+    <!-- navigation bar --> 
+    <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="https://documentcloud.adobe.com/link/track?uri=urn:aaid:scds:US:322c6db8-c920-4205-96bb-03fedd46a42a" target="_blank">R&eacute;sum&eacute; </a>
+    </div>
+        
+
+<!-- text columns about me --> 
+<div class= "header">
+<div class="row">
+  <div class="column1">
+       <label id="switch" class="switch">
+        <input type="checkbox" onchange="toggleTheme()" id="slider">
+        <span class="slider round"></span>
+        </label>
+    <h1>ABOUT ME</h1>
+      
+    <h2>Hi, I&#39;m Andrea Gonzales! &#40;she&#47;her&#41;</h2>
+    <p> I'm a fourth&#45;year marketing and design student at the University of San Francisco. I grew up loving art of all forms, from oil painting, sculpting, crocheting clothes, to digital design. Prior to design, I was a nursing and psychology student who was taught that art was strictly a hobby. As a first generation Filipina, the idea of being either a nurse or nothing at all was instilled in my mind at an early age. During my sophomore year at my university, I realized that I didn&#39;t want to continue pursuing a career that I wasn&#39;t passionate and curious about. Since becoming a marketing major and design minor, my passion and drive to become a better designer each day continues to strenghten. Because I truly enjoy what I do, I take initiative to constantly learn and actively apply my skills and passion in my work. Although the transition from nursing and psychology to marketing and design was difficult, it was the best decision I&#39;ve ever made for myself and my future, and I hope to utilize my talents and passion to inspire other creatives.
+        <br>
+    I design to connect with others, create meaningful experiences, and promote inclusivity for all communities. Through design, I work towards creating for and with everyone in order to include all experiences, identities, and perspectives in our world.
+        <br>
+    I am currently seeking opportunities in visual design and&#47;or product design, where I can share my love for creating with others, so feel free to reach out to me on LinkedIn or through email at andmgonzales&#64;gmail.com!</p>
+  </div>
+    
+  <div class="column2">
+      
+    <img class=me2021 src="me2021.png" width="400px" height="400px">
+      
+    <h3>I ALSO ENJOY...</h3>
+    <p> &#129368; Exploring new restaurants in the Bay Area
+        <br>
+        &#127939;&#8205;&#9792;&#65039; Running &#43; weightlifting
+        <br>
+        &#129526; Knitting &#43; crocheting
+        <br>
+        &#127928; Making music with my telecaster
+        <br>
+        &#128248; Attempting food photography
+        <br>
+        &#128105;&#8205;&#127912; Portrait oil painting
+        <br>
+        &#128478;&#65039; Writing for the SF Foghorn 
+      </p>
+  </div>
+</div>
+
+
+
+     
+    
+    <!-- footer -->  
+    <div class="footer"> 
+    <h7>
+    &#128075; Thanks again for stopping by!
+    </h7>
+    
+    <p class="footerstuff">
+    Feel free to reach out to me on <a href="https://www.linkedin.com/in/andreamgonzales/">LinkedIn</a>, or through email at andmgonzales&#64;gmail.com. You can also take a look at my <a href="https://documentcloud.adobe.com/link/track?uri=urn:aaid:scds:US:322c6db8-c920-4205-96bb-03fedd46a42a" target="_blank">r&eacute;sum&eacute; </a> for more info about me.
+    </p>
+    
+    <h8>
+    &#128187; Coded with &#128147; by Andrea Gonzales
+    </h8>
+    </div>    
+ 
+    
+     <script>
+         // function to set a given theme/color-scheme
+        function setTheme(themeName) {
+            localStorage.setItem('theme', themeName);
+            document.documentElement.className = themeName;
+        }
+
+        // function to toggle between light and dark theme
+        function toggleTheme() {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-light');
+            } else {
+                setTheme('theme-dark');
+            }
+        }
+
+        // Immediately invoked function to set the theme on initial load
+        (function () {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-dark');
+                document.getElementById('slider').checked = false;
+            } else {
+                setTheme('theme-light');
+              document.getElementById('slider').checked = true;
+            }
+        })();
+  </script>
+    
+ 
+</body>
+</html>
