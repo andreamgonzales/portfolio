@@ -1,7 +1,10 @@
-*{
-    padding:0;
-    margin:0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
 }
+
+* { box-sizing: border-box }
 
 
 @font-face{
@@ -24,86 +27,87 @@
     font-weight: 600;
 }
 
+.body {
+      background: var(--color-primary);
+        color: #303030;
+        font-size: 25px;
+   }
+
 .theme-light {
-   --color-primary: white;
-   --color-secondary: #f4f4f4;
-   --color-accent: #faa9fc;
-   --font-color: #232320;
-   --font-color-secondary: #65636f;
+    /* main background colors */
+   --color-primary: linear-gradient(
+         180deg,
+         #FEF7F0 0%,
+         #DEDCF7 65%,
+         #F7E8EB 85%
+      );
+    /* second background color? */
+   --color-secondary: #f5f5f5;
+    /* accent color for fonts or anything */
+   --color-accent: #7F7F7F;
+    /* main font color */
+   --font-color: #212121;
+    /* second color for sub headers, sub info */
+   --font-color-secondary: #7F7F7F;
+     /* third color for links, accents */
+    --font-color-accent: #212121;
 }
 .theme-dark {
-   --color-primary: #161615;
-   --color-secondary: #161615;
-   --color-accent: #faa9fc;
-   --font-color: #ffffff;
-    --font-color-secondary: #ffffff;
+   --color-primary: #212121;
+   --color-secondary: #232323;
+   --color-accent: #7F7F7F;
+   --font-color: #fafafa;
+    --font-color-secondary: #A2A2A2;
+    --font-color-accent: #fafafa;
 }
 
 
 /* NAVIGATION BAR */
 .topnav {
-  background-color: white;
+  background: transparent;
   overflow: hidden;
-  padding-top: 16px;
+  padding-top: 15px;
   padding-bottom: 16px;
-  position: fixed;
   width: 100%;
     z-index: 1;
-       box-shadow: 0 2px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.01);
+    padding-right: 50px;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: left
-  color: #232320;
+  float: right;
+  color: var(--font-color-secondary);
   text-align: center;
-  padding: 14px 55px;
+  padding: 14px 30px;
   font-size: 15px;
   font-family: "KReg"
 }
 
 /* Color of links in general */
 .topnav a:link{
-  color: #232320;
+  color: var(--font-color-secondary);
   text-decoration: none;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover{
-  color: #faa9fc!important; /* the important part keeps the hover color always the color i want when i hover, even if i already visited the link before */
-  
+  color: var(--font-color-accent)!important; /* the important part keeps the hover color always the color i want when i hover, even if i already visited the link before */
+  text-decoration: underline;
  
 }
 
 /* Change the color for the active/current link */
 .topnav a:active{
-  color: #232320;
+  color: var(--font-color-accent);
   text-decoration: none;
 }
 
 /* Change the color for the link you've visited already */
 .topnav a:visited{
-    color: #232320;
+    color: var(--font-color-secondary);
     text-decoration: none;
 }
 
-
-
-.body {
-  background: var(--color-primary);
-  color: #303030;
-  font-size: 25px;
-}
-
-
-
-.container button {
-  color: var(--font-color);
-  background: var(--color-primary);
-  padding: 10px 20px;
-  border: 0;
-  border-radius: 5px;
-}
 
 /* The switch - the box around the slider */
 .switch {
@@ -111,6 +115,7 @@
   display: inline-block;
   width: 60px;
   height: 34px;
+    
 }
 
 /* Hide default HTML checkbox */
@@ -128,42 +133,47 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #3D3D3D;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+    
 }
 
 .slider:before {
   position: absolute;
   content: "";
-  height: 40px;
-  width: 40px;
-  left: 0px;
+  height: 25px;
+  width: 25px;
+  left: 5px;
   bottom: 4px;
   top: 0;
   bottom: 0;
   margin: auto 0;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  box-shadow: 0 0px 15px #2020203d;
-  background: white url('night.png');
+  /* can do picture link, then color for circle portion to have both color and image */
+  background: #212121;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 input:checked + .slider {
-  background-color: #faa9fc;
+  background-color: #EFD4C2;
+    box-shadow: 0 0px 0px #2020203d;
+    
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #faa9fc;
+   box-shadow: 0 0px 0px #2020203d;
 }
 
 input:checked + .slider:before {
   -webkit-transform: translateX(24px);
   -ms-transform: translateX(24px);
+  /* below is how many pixels the light circle moves to the right */
   transform: translateX(24px);
-  background: white url('day.png');
+  /* can do picture link, then color for circle portion to have both color and image */
+  background: #FAF5F1;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -171,16 +181,13 @@ input:checked + .slider:before {
 /* Rounded sliders */
 .slider.round {
   border-radius: 34px;
+    
 }
 
 .slider.round:before {
   border-radius: 50%;
+ 
 }
-
-
-
-
-
 
 
 
@@ -198,35 +205,15 @@ input:checked + .slider:before {
   }
 }
 
-/* both of the columns together */
-.headerrow{
-    padding-left: 80px;
-    padding-right: 80px;
+/* header */
+.header{
+    padding-left: 100px;
+    padding-right: 200px;
     height: 100vh;
     margin:auto;
 }
-/* CREATES THE 2 COLUMN TEXTS */
-/* Create two equal columns that floats next to each other */
-.column1 {
-  float: left;
-  width: 50%;
-    margin:auto;
-   
-}
 
-.column2 {
-  float: right;
-  width: 50%;
-    padding-top: 180px;
-    padding-right: 150px;
-    
-}
 
-/* Clear floats after the columns */
-.headerrow:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
@@ -257,6 +244,7 @@ h1{
 
 /* typewriter animation for title */
 .typewriter h1 {
+  display: flex;
   overflow: hidden;
   border-right: 5px solid #232320; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -267,10 +255,15 @@ h1{
       blink-caret .75s step-end infinite;
 }
 
+.typewriter h1 {
+  display: inline-flex;
+}
+
+
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
-  to { width: 100% }
+  to { width: 36% }
 }
 
 /* The typewriter cursor effect */
@@ -285,22 +278,99 @@ h1{
 h2{
     font-family: KReg;
     font-weight: 548;
-    font-size: 26px;
-    color: var(--font-color-secondary);
-    line-height: 50px;
+    font-size: 29px;
+    color: var(--font-color);
+    line-height: 40px;
 }
 
-.stars{
-    color: #faa9fc;
+/* subheader aka who i am */
+h3{
+    font-family: KReg;
+    font-weight: 548;
+    font-size: 23px;
+    color: var(--font-color-secondary);
+    padding-top: 22px;
 }
+
 
 /* whole header */
 .headertext{
-    padding-left: 80px;
-    padding-right: 70px;
-    padding-top: 200px;
-    margin: auto;
+  margin: 0;
+  padding-top: 100px;
+  height: 100vh;
+    padding-left: 50px;
 }
+}
+
+
+
+
+/* Color of links in body */
+.body a:link{
+  color: var(--font-color-secondary);
+  text-decoration: underline;
+ text-decoration: underline solid 0.2px;
+
+}
+
+/* Change the color of links on hover */
+.body a:hover{
+  color: var(--font-color)!important; /* the important part keeps the hover color always the color i want when i hover, even if i already visited the link before */
+  text-decoration: underline solid 1px;
+ 
+}
+
+/* Change the color for the active/current link */
+.body a:active{
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+/* Change the color for the link you've visited already */
+.body a:visited{
+    color: var(--font-color-secondary);
+    text-decoration: underline solid 1px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Color of links in body */
+.header a:link{
+  color: var(--font-color-secondary);
+  text-decoration: underline;
+ text-decoration: underline solid 0.2px;
+
+}
+
+/* Change the color of links on hover */
+.header a:hover{
+  color: var(--font-color)!important; /* the important part keeps the hover color always the color i want when i hover, even if i already visited the link before */
+  text-decoration: underline solid 1px;
+ 
+}
+
+/* Change the color for the active/current link */
+.header a:active{
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+/* Change the color for the link you've visited already */
+.header a:visited{
+    color: var(--font-color-secondary);
+    text-decoration: underline solid 1px;
+}
+
+
+
+
 
 
 
@@ -310,17 +380,40 @@ h2{
 /* WORK PORTION OF PAGE */
 .work{
     padding-left: 80px;
-    padding-top: 90px;
+    padding-top: 80px;
     padding-bottom: 60px;
     padding-right: 80px;
     
 }
 
+
+/* selected work subtitle */
+h4{
+    font-family: KReg;
+    font-weight: 548;
+    font-size:20px;
+    color: var(--font-color-secondary);
+    padding-top: 200px;
+    padding-left:59px;
+}
+
+/* selected work title */
+h5{
+    font-family: KBold;
+    font-weight: 100;
+    font-size:23px;
+    color: var(--font-color);
+    padding-top: 5px;
+    padding-left:59px;
+    padding-bottom: 30px;
+}
+
+
 /* INDIVIDUAL PROJECT FLEX BOX PICS */
 .row {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 0 1px;
 }
 
 /* Create four equal columns that sits next to each other */
@@ -333,7 +426,7 @@ h2{
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.05);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.05), 0 6px 20px 0 rgba(0,0,0,0.05);
   border-radius: 5px;
 }
 
@@ -374,31 +467,11 @@ h2{
 
 
 .footer{
-    background: var(--color-secondary);
-    padding-bottom: 70px;
-    padding-top: 40px;
+    padding-bottom: 200px;
+    padding-top: 150px;
     padding-left: 150px;
     padding-right: 150px;
-}
-
-/* FOOTER FLEX PROPERTIES*/
-.flex-containerfoot {
-  /* We first create a flex layout context */
-  display: flex;
-  
-  /* Then we define the flow direction 
-     and if we allow the items to wrap 
-   * Remember this is the same as:
-   * flex-direction: row;
-   * flex-wrap: wrap;
-   */
-  flex-flow: row wrap;
-  
-  /* Then we define how is distributed the remaining space */
-  justify-content: flex-start;
-  
-  padding-left: 90px;
-  margin: 0;
+    text-align: center;
 }
 
 
@@ -407,14 +480,14 @@ h7{
     font-family: KBold;
     font-weight: bold;
     color: var(--font-color);
-    font-size: 22px;
+    font-size: 30px;
     line-height: 60px;
 }
 
 .footerstuff{
     font-family: KReg;
-    color: var(--font-color-secondary);
-    font-size: 17px;
+    color: var(--font-color);
+    font-size: 20px;
     padding-bottom: 20px;
     line-height: 28px;
 }
@@ -430,23 +503,24 @@ h8{
 /* Color of links in general */
 .footer a:link{
   color: var(--font-color-secondary);
+    text-decoration: underline;
 }
 
 /* Change the color of links on hover */
 .footer a:hover{
-  color:  #faa9fc!important; /* the important part keeps the hover color always the color i want when i hover, even if i already visited the link before */
-  text-decoration: none;
+  color:  #303030!important; /* the important part keeps the hover color always the color i want when i hover, even if i already visited the link before */
+  text-decoration: underline;
 }
 
 /* Change the color for the active/current link */
 .footera:active{
-  color: #faa9fc;
+  color: #303030;
 }
 
 /* Change the color for the link you've visited already */
 .footer a:visited{
     color: var(--font-color-secondary);
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 
@@ -472,4 +546,3 @@ h8{
 @media only screen and (min-width: 1200px) {
   .topnav, .work, .footer
 }
-
